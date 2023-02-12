@@ -1,5 +1,3 @@
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -13,15 +11,14 @@ public class LoginTest {
     WebDriver driver = new ChromeDriver();
 
     @BeforeEach
-    void setUp() {
+    void setUp() throws Exception {
         System.setProperty("WebDriver.chrome.driver", "drivers/chromedriver.exe");
         driver.get("https://automationexercise.com/login");
-        WebDriver driver = new ChromeDriver();
         driver.manage().window().setSize(new Dimension(1000, 1000));
     }
 
 //    @AfterEach
-//    void tearDown() {
+//    void tearDown() throws Exception {
 //        driver.quit();
 //    }
 
