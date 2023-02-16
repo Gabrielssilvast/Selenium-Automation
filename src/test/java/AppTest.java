@@ -16,7 +16,7 @@ public class AppTest {
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://automationexercise.com/login");
-        driver.manage().window().setSize(new Dimension(1000, 1000));
+        driver.manage().window().setSize(new Dimension(1000, 800));
 
 
         String currentUrl = driver.getCurrentUrl();

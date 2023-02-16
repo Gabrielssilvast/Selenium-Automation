@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -14,7 +15,7 @@ public class LoginTest {
     void setUp() throws Exception {
         System.setProperty("WebDriver.chrome.driver", "drivers/chromedriver.exe");
         driver.get("https://automationexercise.com/login");
-        driver.manage().window().setSize(new Dimension(1000, 1000));
+        driver.manage().window().setSize(new Dimension(1000, 800));
     }
 
 //    @AfterEach
@@ -34,10 +35,10 @@ public class LoginTest {
         WebElement loginLocator = driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/button"));
         loginLocator.click();
 
-//        WebElement tagLogout = driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a"));
-//        String ConfirmLogin = tagLogout.getText();
-//
-//        Assertions.assertTrue(ConfirmLogin.equals("Logout"));
+//        Text Confirm by Xpath
+        WebElement tagLogout = driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a"));
+        String ConfirmLogin = tagLogout.getText();
+        Assertions.assertEquals("Logout", ConfirmLogin);
     }
 
     }
