@@ -15,8 +15,16 @@ public abstract class BasePage {
     }
 
     public void visit(String url){
-
-
+        this.driver.get(url);
+    }
+    publi STRING getCurrentUrl(){
+        return this.driver.getCurrentUrl();
+    }
+    public void quitWebDriver() {
+        this.driver.quit();
+    }
+    public WebElement findElement(By locator){
+        return this.driver.findElement(locator);
     }
 
 
