@@ -21,7 +21,7 @@ public abstract class BasePage {
         return this.driver.getCurrentUrl();
     }
     public void quitWebDriver() {
-        this.driver.quit();
+//        this.driver.quit();
     }
     public WebElement findElement(By locator){
         return this.driver.findElement(locator);
