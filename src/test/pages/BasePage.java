@@ -26,8 +26,22 @@ public abstract class BasePage {
     public WebElement findElement(By locator){
         return this.driver.findElement(locator);
     }
+    public void type(String input, By locator);{
+        this.driver.findElement(locator).sendKeys(input);
+    }
+    public boolean isDisplayed(By locator){
+        try{
 
+        } catch (NoSuchElementException e){
+            return false;
+        }
+    }
+    public void click(By locator){
+        this.driver.findElement(locator).click();
+    }
 
-
+    public String getText(By locator){
+        this.driver.findElement.(locator).getText();
+    }
 
 }
