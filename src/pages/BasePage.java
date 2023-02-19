@@ -39,7 +39,7 @@ public abstract class BasePage {
     public void click(By locator){
         this.driver.findElement(locator).click();
     }
-
+//    Inf encapulamento
     public String getText(By locator){
         this.driver.findElement.(locator).getText();
     }
