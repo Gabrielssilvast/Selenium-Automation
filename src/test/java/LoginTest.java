@@ -12,7 +12,7 @@ public class LoginTest {
     WebDriver driver = new ChromeDriver();
 
     @BeforeEach
-    void setUp() throws Exception {
+    void setUp() {
         System.setProperty("WebDriver.chrome.driver", "drivers/chromedriver.exe");
         driver.get("https://automationexercise.com/login");
         driver.manage().window().setSize(new Dimension(1000, 800));
