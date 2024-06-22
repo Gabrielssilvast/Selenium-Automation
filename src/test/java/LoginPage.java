@@ -11,7 +11,7 @@ public class LoginPage extends BasePage {
 
     public void signin() {
         if (super.isDisplayed(emailAddressLocator)) {
-            super.type("gabrielssilvast@gmail.com", emailAddressLocator);
+            super.type("teste@gmail.com", emailAddressLocator);
             super.type("123456", passwordLocator);
             super.click(submitBtnLocator);
         } else {
@@ -23,4 +23,7 @@ public class LoginPage extends BasePage {
         return super.getText(tagMyAccountLocator);
     }
 
+    protected Object tagMyAccountLocator() {
+        return null;
+    }
 }

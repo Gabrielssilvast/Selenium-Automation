@@ -30,7 +30,4 @@ class LoginPageTest extends LoginPage {
         Assertions.assertTrue(this.loginPage.tagMyAccountLocator().equals("Login to your account"));
         Assertions.assertFalse(this.loginPage.getCurrentUrl().equals(this.url));
     }
-    private Object tagMyAccountLocator() {
-        return null;
-    }
 }
